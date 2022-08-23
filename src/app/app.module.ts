@@ -7,13 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { MenuPrincipalComponent } from './shared/components/menu-principal/menu-principal.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { InstrumentosComponent } from './components/RolAdministrador/instrumentos/instrumentos.component';
+import { CanastasComponent } from './components/RolAdministrador/canastas/canastas.component';
+import { DocentesComponent } from './components/RolAdministrador/docentes/docentes.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuPrincipalComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    InstrumentosComponent,
+    CanastasComponent,
+    DocentesComponent
   ],
   imports: [
     BrowserModule,
