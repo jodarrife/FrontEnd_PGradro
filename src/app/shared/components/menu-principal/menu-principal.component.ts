@@ -33,5 +33,11 @@ export class MenuPrincipalComponent implements OnInit {
       iconMaterial: 'home',
       iconFa: null,
     },
+    {
+      title: 'Instrumentos',
+      url: '/AdminInstrumentos',
+      iconMaterial: 'home',
+      iconFa: null,
+    },
   ];
 }
