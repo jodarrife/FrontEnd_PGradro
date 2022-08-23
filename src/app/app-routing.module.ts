@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'authentication', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   { path: 'authentication', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   { path: 'AdminInstrumentos', loadChildren: () => import('./components/RolAdministrador/instrumentos/instrumentos.module' ).then(m => m.InstrumentosModule) },
+  { path: 'AdminCanastas', loadChildren: () => import('./components/RolAdministrador/canastas/canastas.module' ).then(m => m.CanastasModule) },
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-canastas',
+  selector: 'app-instrumentos',
   templateUrl: './canastas.component.html',
   styleUrls: ['./canastas.component.scss']
 })

@@ -1,1 +1,57 @@
-<p>canasta works!</p>
+<form [formGroup]="formulario" (ngSubmit)="guardar()" (keyup.enter)="guardar()" autocomplete="on">
+
+    <div class="row center-xs">
+        <h1>{{datosEntrada?.titulo}} Canasta</h1>
+    </div>
+
+    <mat-dialog-content>
+        <div class="row center-xs">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" formControlName="nombre">
+                <mat-hint align="start">
+                    <span class="text-danger ml-2" *ngIf="formulario.get('nombre')?.hasError('required') 
+                    && formulario.get('nombre')?.touched">
+                        El nombre <strong>es requerido</strong>
+                    </span>
+                </mat-hint>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>Cantidad Instrumentos</mat-label>
+                <input matInput placeholder="Cantidad" formControlName="cantidad">
+                <mat-hint align="start">
+                    <span class="text-danger ml-2" *ngIf="formulario.get('cantidad')?.hasError('required') 
+&& formulario.get('cantidad')?.touched">
+                        La cantidad de instrumentos <strong>es requerida</strong>
+                    </span>
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Instrumentos</mat-label>
+                <input matInput placeholder="NombreIns" formControlName="nombreIns">
+                <mat-hint align="start">
+                    <span class="text-danger ml-2" *ngIf="formulario.get('nombreIns')?.hasError('required') 
+                    && formulario.get('nombreIns')?.touched">
+                        El instrumento <strong>es requerido</strong>
+                    </span>
+                </mat-hint>
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+
+    <div class=" form-group row center-xs">
+        <div class="col-xs">
+            <button mat-flat-button (click)="cancelar()" type="button" color="warn">Cancelar</button>
+        </div>
+
+        <div class="col-xs">
+            <button mat-flat-button (click)="guardar()" type="submit" color="primary"
+                [disabled]="formulario.invalid">Guardar</button>
+        </div>
+    </div>
+
+</form>
