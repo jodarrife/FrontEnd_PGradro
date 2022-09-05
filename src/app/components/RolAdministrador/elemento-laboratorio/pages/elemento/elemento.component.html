@@ -1,0 +1,76 @@
+<form [formGroup]="formulario" (ngSubmit)="guardar()" (keyup.enter)="guardar()" autocomplete="on">
+
+    <div class="row center-xs">
+        <h1>{{datosEntrada?.titulo}} Elementos</h1>
+    </div>
+
+    <mat-dialog-content>
+        <div class="row center-xs">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Seleccione un tipo</mat-label>
+                <mat-select [(value)]="selected">
+                  <mat-option value="option0">EQUIPO BIOMEDICO</mat-option>
+                  <mat-option value="option1">AYUDA AUDIOVISUAL</mat-option>
+                  <mat-option value="option2">PAQUETE DE ROPA</mat-option>
+                  <mat-option value="option3">SUTURA ABSORBIBLE</mat-option>
+                  <mat-option value="option4">SUTURA NO ABSORBIBLE</mat-option>
+                  <mat-option value="option5">ROPA QUIRURGICA ACCESORIA</mat-option>
+                  <mat-option value="option6">ELEMENTOS DE CURACION</mat-option>
+                  <mat-option value="option7">INSUMOS</mat-option>
+                  <mat-option value="option8">HOJA DE BISTURI</mat-option>
+                  <mat-option value="option9">JERINGA </mat-option>
+                  <mat-option value="option10">AGUJA HIPODERMICA</mat-option>
+                  <mat-option value="option11">CATETER VENOSO PERIFERICO Ó YELCO</mat-option>
+                  <mat-option value="option12">GUANTE</mat-option>
+                  <mat-option value="option13">ELEMENTO METÁLICO</mat-option>
+                  <mat-option value="option14">MEDICAMENTOS</mat-option>
+                  <mat-option value="option15">LIQUIDOS</mat-option>
+                </mat-select>
+                <mat-hint>
+                    <span class="text-danger ml-2"
+                    *ngIf="formulario.get('tipo')?.hasError('required') 
+                    && formulario.get('tipo')?.touched">
+                    El departamento <strong>es requerido</strong>
+                  </span>
+                </mat-hint>
+              </mat-form-field>
+              
+        
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Nombre" formControlName="nombre">
+                <mat-hint align="start">
+                    <span class="text-danger ml-2" *ngIf="formulario.get('nombre')?.hasError('required') 
+                    && formulario.get('nombre')?.touched">
+                        El nombre <strong>es requerido</strong>
+                    </span>
+                </mat-hint>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>Cantidad</mat-label>
+                <input matInput placeholder="Cantidad" formControlName="cantidad">
+                <mat-hint align="start">
+                    <span class="text-danger ml-2" *ngIf="formulario.get('cantidad')?.hasError('required') 
+&& formulario.get('cantidad')?.touched">
+                        La Cantidad <strong>es requerido</strong>
+                    </span>
+                </mat-hint>
+            </mat-form-field>
+        </div>
+    </mat-dialog-content>
+
+    <div class=" form-group row center-xs">
+        <div class="col-xs">
+            <button mat-flat-button (click)="cancelar()" type="button" color="warn">Cancelar</button>
+        </div>
+
+        <div class="col-xs">
+            <button mat-flat-button (click)="guardar()" type="submit" color="primary"
+                [disabled]="formulario.invalid">Guardar</button>
+        </div>
+    </div>
+
+</form>

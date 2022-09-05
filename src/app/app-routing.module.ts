@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule) },
   { path: 'authentication', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
   { path: 'authentication', loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule) },
-  { path: 'AdminInstrumentos', loadChildren: () => import('./components/RolAdministrador/instrumentos/instrumentos.module' ).then(m => m.InstrumentosModule) },
+  { path: 'AdminElementos', loadChildren: () => import('./components/RolAdministrador/elemento-laboratorio/elemento-laboratorio.module' ).then(m => m.ElementoLaboratorioModule) },
   { path: 'AdminCanastas', loadChildren: () => import('./components/RolAdministrador/canastas/canastas.module' ).then(m => m.CanastasModule) },
   { path: 'AdminEspacios', loadChildren: () => import('./components/RolAdministrador/espacio-fisicos/espacio-fisicos.module' ).then(m => m.EspacioFisicosModule) },
 ];

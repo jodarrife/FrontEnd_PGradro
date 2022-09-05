@@ -3,18 +3,19 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-instrumento',
-  templateUrl: './instrumento.component.html',
-  styleUrls: ['./instrumento.component.scss']
+  selector: 'app-elemento',
+  templateUrl: './elemento.component.html',
+  styleUrls: ['./elemento.component.scss']
 })
-export class InstrumentoComponent implements OnInit {
+export class ElementoComponent implements OnInit {
 
    //Variables 
-  
+   //Variables 
+   selected = 'option0';
    constructor( 
     //private comunaService:ComunaService, 
     private fb: FormBuilder,
-    public dialogRef: MatDialogRef<InstrumentoComponent>, 
+    public dialogRef: MatDialogRef<ElementoComponent>, 
     @Inject(MAT_DIALOG_DATA) public datosEntrada: any
     ) {
      
@@ -27,6 +28,7 @@ export class InstrumentoComponent implements OnInit {
    //estructura para usar formulario reactivo
    formulario = new FormGroup({
     nombre: new FormControl(null, [Validators.required, Validators.maxLength(40)]),
+    //tipo: new FormControl(null, [Validators.required, Validators.maxLength(40)]),
     cantidad: new FormControl(null, [Validators.required, Validators.maxLength(40)]),
   });
   

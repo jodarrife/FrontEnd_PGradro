@@ -34,8 +34,8 @@ export class MenuPrincipalComponent implements OnInit {
       iconFa: null,
     },
     {
-      title: 'Instrumentos',
-      url: '/AdminInstrumentos',
+      title: 'Elementos Laboratorio',
+      url: '/AdminElementos',
       iconMaterial: 'home',
       iconFa: null,
     },

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { InstrumentoListRoutingModule } from './instrumento-list-routing.module';
+import { ElemtoListRoutingModule } from './elemento-list-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    InstrumentoListRoutingModule
+    ElemtoListRoutingModule
   ]
 })
-export class InstrumentoListModule { }
+export class ElementoListModule { }
