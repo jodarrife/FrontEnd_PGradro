@@ -45,5 +45,11 @@ export class MenuPrincipalComponent implements OnInit {
       iconMaterial: 'home',
       iconFa: null,
     },
+    {
+      title: 'Espacios Fisicos',
+      url: '/AdminEspacios',
+      iconMaterial: 'home',
+      iconFa: null,
+    },
   ];
 }

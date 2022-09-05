@@ -11,6 +11,8 @@ import { LoginComponent } from './components/login/login.component';
 import { InstrumentosComponent } from './components/RolAdministrador/instrumentos/instrumentos.component';
 import { CanastasComponent } from './components/RolAdministrador/canastas/canastas.component';
 import { DocentesComponent } from './components/RolAdministrador/docentes/docentes.component';
+import { EspacioFisicosComponent } from './components/Roladministrador/espacio-fisicos/espacio-fisicos.component';
+
 
 
 
@@ -22,7 +24,8 @@ import { DocentesComponent } from './components/RolAdministrador/docentes/docent
     LoginComponent,
     InstrumentosComponent,
     CanastasComponent,
-    DocentesComponent
+    DocentesComponent,
+    EspacioFisicosComponent
   ],
   imports: [
     BrowserModule,
